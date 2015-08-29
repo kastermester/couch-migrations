@@ -1,0 +1,41 @@
+{
+  "name": "couch-migrations",
+  "version": "1.0.0",
+  "description": "A simple (personal) migration framework for nodejs and couchdb.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepublish": "babel --whitelist 'es7.asyncFunctions,es7.objectRestSpread,regenerator,es6.modules,es6.arrowFunctions,strict,flow' src -d lib && babel -e 0 src -d legacy-lib",
+    "run": "babel-node --stage 0 src/index.js"
+  },
+  "author": "Kaare Hoff Skovgaard (kaare@kaareskovgaard.net)",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "nano": "^6.1.5",
+    "nomnom": "^1.8.1",
+    "prompt": "^0.2.14",
+    "regenerator": "^0.8.36",
+    "semver": "^5.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/kastermester/couch-migrations/issues",
+    "email": "kaare@kaareskovgaard.net"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "iojs": ">=3.0.0"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kastermester/couch-migrations.git"
+  },
+  "bin": "./bin/couch-migrations.js",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^4.0.10",
+    "eslint": "^1.2.1"
+  }
+}

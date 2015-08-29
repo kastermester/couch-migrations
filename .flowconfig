@@ -1,0 +1,11 @@
+[ignore]
+.*/couch-migrations/lib/.*
+.*/couch-migrations/legacy-lib/.*
+[include]
+
+[libs]
+libs/
+[options]
+
+[version]
+0.14.0

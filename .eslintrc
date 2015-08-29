@@ -1,0 +1,165 @@
+{
+    "rules": {
+        "indent": [
+            2,
+            "tab"
+        ],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "comma-dangle": [
+            2,
+            "always-multiline"
+        ],
+        "new-cap": [
+            2,
+            {
+                "newIsCap": true,
+                "capIsNew": true,
+                "capIsNewExceptions": [
+                    "Map",
+                    "List",
+                    "Seq"
+                ]
+            }
+        ],
+        "strict": [
+            0
+        ],
+        "yoda": [
+            2,
+            "never"
+        ],
+        "no-with": [
+            2
+        ],
+        "no-sequences": [
+            2
+        ],
+        "no-self-compare": [
+            2
+        ],
+        "no-redeclare": [
+            2
+        ],
+        "no-new": [
+            2
+        ],
+        "no-native-reassign": [
+            2
+        ],
+        "no-lone-blocks": [
+            2
+        ],
+        "no-labels": [
+            2
+        ],
+        "no-implied-eval": [
+            2
+        ],
+        // Disable this at will when needed - this will make it very explicit that it is intentional
+        "no-fallthrough": [
+            2
+        ],
+        "no-extra-bind": [
+            2
+        ],
+        "no-eval": [
+            2
+        ],
+        "no-else-return": [
+            2
+        ],
+        "eqeqeq": [
+            2,
+            "smart"
+        ],
+        "dot-location": [
+            2,
+            "property"
+        ],
+        "curly": [
+            2,
+            "all"
+        ],
+        "consistent-return": [
+            2
+        ],
+        "no-dupe-args": [
+            2
+        ],
+        "no-duplicate-case": [
+            2
+        ],
+        "valid-typeof": [
+            2
+        ],
+        "quote-props": [
+            2,
+            "consistent-as-needed"
+        ],
+        "no-sparse-arrays": [
+            2
+        ],
+        "no-negated-in-lhs": [
+            2
+        ],
+        "no-unreachable": [
+            2
+        ],
+        "use-isnan": [
+            2
+        ],
+        "no-extra-semi": [
+            2
+        ],
+        "no-catch-shadow": [
+            2
+        ],
+        "no-delete-var": [
+            2
+        ],
+        "no-undefined": [
+            2
+        ],
+        "no-use-before-define": [
+            2
+        ],
+        "brace-style": [
+            2,
+            "1tbs"
+        ],
+        "no-multiple-empty-lines": [
+            2,
+            {"max": 1}
+        ],
+        "space-after-keywords": [
+            2,
+            "always"
+        ],
+        "space-before-blocks": [
+            2,
+            "always"
+        ],
+        "complexity": [
+            2,
+            10
+        ]
+    },
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true,
+        "browser": true
+    },
+    "parser": "babel-eslint",
+}
