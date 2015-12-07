@@ -3,6 +3,10 @@ var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 
+var r = require('./require');
+
+var inlineRequire : (path: string) => ((name: string) => string);
+
 export class Generator {
 	template: string;
 	migrationsFolder: string;
@@ -21,7 +25,7 @@ export class Generator {
 	}
 
 	generate() : void {
-		var templateFn = require(this.template);
+		var templateFn = inlineRequire(this.template);
 
 		var now = new Date();
 

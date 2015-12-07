@@ -1,11 +1,24 @@
 /* @flow */
-import {CouchDBClient} from './couch';
+import CouchDBClient from 'couch-flow-client';
 import {DBApi} from './db';
 import type {MigrationInfo, MigrationDocument} from './types';
 import {getMigrations} from './fs';
 import path from 'path';
 
 import type {Config} from './config';
+
+import r from './require';
+
+type maybePromise = Promise|any;
+
+type migrationType = {
+	up: (host: string, database: string) => maybePromise,
+	down: (host: string, database: string) => maybePromise
+};
+
+type requireMigrationType = (path: string) => migrationType;
+
+const inlineRequire : requireMigrationType = r;
 
 type options = {
 	failOnHashError: boolean,
@@ -86,7 +99,7 @@ export class Runner {
 
 	async runMigrationUp(migration: MigrationInfo, doc: MigrationDocument) : Promise<MigrationDocument> {
 		var relativePath = this.resolveMigrationPath(migration);
-		var m = require(relativePath);
+		var m = inlineRequire(relativePath);
 
 		this.validateMigration(m, migration.name);
 
@@ -104,7 +117,7 @@ export class Runner {
 
 	async runMigrationDown(migration: MigrationInfo, doc: MigrationDocument) : Promise<MigrationDocument> {
 		var relativePath = this.resolveMigrationPath(migration);
-		var m = require(relativePath);
+		var m = inlineRequire(relativePath);
 
 		var idx = doc.migrations.indexOf(migration);
 

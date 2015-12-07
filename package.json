@@ -1,6 +1,6 @@
 {
   "name": "couch-migrations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple (personal) migration framework for nodejs and couchdb.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "author": "Kaare Hoff Skovgaard (kaare@kaareskovgaard.net)",
   "license": "MIT",
   "dependencies": {
-    "mkdirp": "^0.5.1",
+    "couch-flow-client": "^1.0.3",
+    "mkdirp": "0.5.1",
     "nano": "^6.1.5",
     "nomnom": "^1.8.1",
     "prompt": "^0.2.14",

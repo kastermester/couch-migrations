@@ -1,5 +1,6 @@
 /* @flow */
-import type {CouchDBClient} from './couch';
+import type { NanoResponse} from 'couch-flow-client';
+import type CouchDBClient from 'couch-flow-client';
 
 import type {MigrationDocument} from './types';
 
