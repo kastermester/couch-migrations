@@ -1,6 +1,6 @@
 {
   "name": "couch-migrations",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple (personal) migration framework for nodejs and couchdb.",
   "main": "index.js",
   "scripts": {

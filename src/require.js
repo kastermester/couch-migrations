@@ -1,6 +1,6 @@
 /**
  * @noflow
  */
- exports = function(path) {
-	 return require(path);
- };
+module.exports = function(path) {
+	return require(path);
+};
